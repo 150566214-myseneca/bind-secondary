@@ -1,1 +1,11 @@
+zone "lab.npatel355.300.ops" {
+        type secondary;
+        file "/var/cache/bind/db.lab.npatel355.300.ops";
+        primaries { 192.168.61.10; };
+};
 
+zone "61.168.192.in-addr.arpa" {
+        type secondary;
+        file "/var/cache/bind/db.192.168.61";
+        primaries { 192.168.61.10; };
+};
