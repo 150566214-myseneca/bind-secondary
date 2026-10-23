@@ -8,6 +8,7 @@ registry running at registry.assign.npatel355.300.ops:5000 using Jenkins.
 - Uses podman build to create the image.
 - Tags the image as `<build number>-<short commit SHA>`.
 - Logs into the registry using Jenkins credentials registry-creds (no secrets in this repository).
+- Registry logins are checked against Active Directory (group Registry Users); the Jenkins account is the AD user registry-ci.
 
 ## CVE Scanning decision
 - Scans the created image with Trivy before pushing it.
